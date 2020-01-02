@@ -1,18 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v3_5_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.jeecms</groupId>
+  <groupId>top.jdev</groupId>
   <artifactId>jeecmsv9f</artifactId>
   <packaging>war</packaging>
   <version>9.0</version>
   <url>http://www.jeecms.com</url>
   <name>jeecmsv9f</name>
-  <organization>
-	<name>jeecms</name>
-	<url>http://www.jeecms.com/</url>
-  </organization>
   <properties>
-  	<java.version>1.7</java.version>
+  	<java.version>1.8</java.version>
 	<tomcat.version>8.0.47</tomcat.version>
 	<servlet-api.version>3.0.1</servlet-api.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> 
@@ -26,7 +22,8 @@
 	<ant.version>1.8.4</ant.version>
 	<aspectj.version>1.8.12</aspectj.version>
 	<axis.version>1.4</axis.version>
-	<c3p0.version>0.9.5.2</c3p0.version>
+	<!-- 原为0.9.5.2 -->
+	<c3p0.version>0.9.5.5</c3p0.version>
 	<nodep.version>2.2.2</nodep.version>
 	<commons-cli.version>1.4</commons-cli.version>
 	<commons-codec.version>1.11</commons-codec.version>
@@ -42,7 +39,6 @@
 	<ezmorph.version>1.0.6</ezmorph.version>
 	<httpclient.version>4.5.3</httpclient.version>
 	<httpcore.version>4.4.8</httpcore.version>
-	
 	<slf4j.version>1.7.25</slf4j.version>
 	<javassist.version>3.22.0-GA</javassist.version>
 	<freemarker.version>2.3.25-incubating</freemarker.version>
@@ -377,7 +373,6 @@
 	    <artifactId>unoil</artifactId>
 	    <version>${openoffice.version}</version>
 	</dependency>
-	
 	<!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
 	<dependency>
 	    <groupId>ch.qos.logback</groupId>
@@ -784,7 +779,7 @@
   </dependencies>
   
   <build>
-    <finalName>jeecmsv9f</finalName>
+    <finalName>ROOT</finalName>
     <!-- 打包配置文件 -->
 	<resources>
 		<resource>
@@ -801,9 +796,9 @@
 			<groupId>org.apache.maven.plugins</groupId>  
 			<artifactId>maven-compiler-plugin</artifactId>  
 			<version>2.3.2</version>  
-			<configuration>  
-				<source>1.7</source>  
-				<target>1.7</target>  
+			<configuration>
+				<source>1.8</source>  
+				<target>1.8</target>  
 				<encoding>UTF-8</encoding>  
 			</configuration>  
 		</plugin>  
@@ -813,14 +808,14 @@
 			<artifactId>tomcat7-maven-plugin</artifactId>
 			<version>2.2</version>
 			<configuration>
-				<port>8081</port>
+				<port>8080</port>
 				<uriEncoding>UTF-8</uriEncoding>
 				<server>tomcat7</server>
 				<contextReloadable>false</contextReloadable>
 				<useTestClasspath>true</useTestClasspath>
+				<path>/</path>
 			</configuration>
 		</plugin>
 	</plugins>
   </build>
-  <description>jeecms是企业级开源网站内容管理系统，支持网站群，支持MySQL、Oracle、SQLServer等数据库,以及具备支付和财务结算能力，支持微信小程序、微信公众号/服务号、完善的WebApi支持</description>
 </project>
