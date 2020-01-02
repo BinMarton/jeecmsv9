@@ -1,0 +1,27 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IDE:IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### IDE:VS Code ###
+.vscode/
+bootstrap.yml
+
+# File:Compiled class
+*.class
+
+# File:Log
+*.log
