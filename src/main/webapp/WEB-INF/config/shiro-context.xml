@@ -73,8 +73,9 @@
 	    <property name="maxAge" value="31536000"/><!-- 365天 -->  
 	</bean>
 	<!-- rememberMe管理器 -->
+	<!-- Marton：原默认值'4AvVhmFLUs0KTA3Kprsdag=='，可能存在反序列化漏洞利用。 -->
 	<bean id="rememberMeManager" class="org.apache.shiro.web.mgt.CookieRememberMeManager">
-	    <property name="cipherKey" value="#{T(org.apache.shiro.codec.Base64).decode('4AvVhmFLUs0KTA3Kprsdag==')}"/>
+	    <property name="cipherKey" value="#{T(org.apache.shiro.codec.Base64).decode('lt181dcQVz/Bo9Wb8ws/Cg==')}"/>
 	    <property name="cookie" ref="rememberMeCookie"/>
 	</bean>
 	<!-- Enable Shiro Annotations for Spring-configured beans.  Only run after -->
